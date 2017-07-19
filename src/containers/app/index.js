@@ -19,11 +19,10 @@ const App = () => {
         <div>
         <header>
         <AppBar
-    title='Black Power Games'
+    title='thebigNEED'
     titleStyle={{textAlign: 'center', font:'Roboto'}}
     onTitleTouchTap={handleTouchTap}
     iconElementLeft={<IconButton><NavigationClose /></IconButton>}
-    style={{backgroundColor: 'black'}}
 />
 </header>
 

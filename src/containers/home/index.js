@@ -1,70 +1,73 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import {GridList, GridTile} from 'material-ui/GridList';
-import IconButton from 'material-ui/IconButton';
-import Subheader from 'material-ui/Subheader';
-import StarBorder from 'material-ui/svg-icons/toggle/star-border';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import {Grid} from 'react-flexbox-grid/lib';
+import FlatButton from 'material-ui/FlatButton';
 
 
+export class Home extends Component {
+    constructor() {
+        super()
+        this.state = {
+            expanded: false,
+        };
+    }
 
-const styles = {
-    root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around',
-    },
-    gridList: {
-        overflowY: 'auto',
-    },
+
+handleToggle = (event, toggle) => {
+    this.setState({expanded: toggle});
 };
 
-const tilesData = [
-    {
-        img: 'images/grid-list/00-52-29-429_6401.jpg',
-        title: 'You Don\'t know Black',
-        author: 'Ezell Burke',
-        alt: ''
-    },
-    {
-        img: 'images/grid-list/00-52-29-429_6402.jpg',
-        title: 'You Don\'t know Black',
-        author: 'Ezell Burke',
-        alt: ''
-    }
-]
+handleExpand = () => {
+    this.setState({expanded: true});
+};
 
-const Home = props => (
-<Grid fluid>
-<div>
-<h2 style={{color:'white', textAlign: 'center'}}>Featured Demo</h2>
-<GridList
-cellHeight={180}
-style={styles.gridList}
+handleReduce = () => {
+    this.setState({expanded: false});
+};
+
+render() {
+    return (
+            <Grid>
+        <Card>
+        <CardHeader
+    title="Ezell Burke"
+    subtitle="CEO"
+    avatar="images/ezellAvatar.jpg"
+        />
+        <CardMedia
+    overlay={<CardTitle
+            title="thebigNEED"
+            subtitle='We know that the internet is the most powerful tool open to everyone today.We must youthe internet and its technologies to bring wealth to everyone, and empower them to kepp and grow it' />}
 >
-{tilesData.map((tile) => (
-<GridTile
-    key={tile.img}
-    title={tile.title}
-    subtitle={<span>by <b>{tile.author}</b></span>}
-    actionIcon={<IconButton><StarBorder color="white" /></IconButton>}
->
-<img alt='' src={tile.img} />
-</GridTile>
-))}
-</GridList>
-</div>
+<img src="images/finIndpic.jpg" alt="" />
+        </CardMedia>
+        <CardTitle title="Join The Platform" subtitle="Financial Freedom the first basic human right" />
+        <CardText>
+       Straight up and down. The first 1000 members will become owners of this website. We will partner with me to make this site
+    </CardText>
+    <CardActions>
+    <FlatButton label="Action1" />
+        <FlatButton label="Action2" />
+        </CardActions>
+        </Card>
+);
+
 </Grid>
-)
+);
+}
+}
+
+
 
 const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
         changePage: () => push('/about-us')
-}, dispatch)
+}, dispatch);
 
 export default connect(
     mapStateToProps,
