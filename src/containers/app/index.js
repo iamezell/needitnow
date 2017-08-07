@@ -1,15 +1,16 @@
 import React from 'react';
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Home from '../home'
 import About from '../about'
-import { Button, Jumbotron, Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
-const jumbotronInstance = (
+import Platform from '../platform'
+import { Button, Jumbotron, Nav, Navbar, NavItem } from 'react-bootstrap';
+/*const jumbotronInstance = (
     <Jumbotron>
-        <h1>Become an owner!</h1>
-        <p>We use the internet and it's technologies to bring wealth to everyone starting from this very site.</p>
+        <h1>You Now Have: $ dollars in your account.</h1>
+        <p>Every active member of this site and any of its sister sites will get a percentage of the profits. Period. Become a part of history!</p>
         <p><Button bsStyle="primary">Learn more</Button></p>
     </Jumbotron>
-);
+);*/
 
 const navbarInstance = (
     <Navbar>
@@ -20,13 +21,6 @@ const navbarInstance = (
         </Navbar.Header>
         <Nav>
             <NavItem eventKey={1} href="#">About</NavItem>
-            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                <MenuItem eventKey={3.1}>Action</MenuItem>
-                <MenuItem eventKey={3.2}>Another action</MenuItem>
-                <MenuItem eventKey={3.3}>Something else here</MenuItem>
-                <MenuItem divider />
-                <MenuItem eventKey={3.4}>Separated link</MenuItem>
-            </NavDropdown>
         </Nav>
     </Navbar>
 );
@@ -34,11 +28,12 @@ const navbarInstance = (
 const App = () => {
     return (
         <div>
-            {navbarInstance}
-            {jumbotronInstance}
+           
             <main>
+                {navbarInstance}
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />
+                <Route exact path="/platform" component={Platform} />
             </main>
         </div>
 )
