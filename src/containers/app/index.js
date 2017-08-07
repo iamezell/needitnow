@@ -19,9 +19,6 @@ const navbarInstance = (
                 <a href="#">thebigNEED</a>
             </Navbar.Brand>
         </Navbar.Header>
-        <Nav>
-            <NavItem eventKey={1} href="#">About</NavItem>
-        </Nav>
     </Navbar>
 );
 

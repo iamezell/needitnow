@@ -19,8 +19,7 @@ const config = {
   const jumbotronInstance = (
     <Jumbotron>
         <h1>You Now Have: $ dollars in your account.</h1>
-        <p>Every active member of this site and any of its sister sites will get a percentage of the profits. Period. Become a part of history!</p>
-        <p><Button bsStyle="primary">Learn more</Button></p>
+        <p>The Bigneed is changing history for the better! Everyone who signs up for this site will stand with me and become a force for change. To that end I pledge that this site will be the one place in the world where you make money just for being an active member, period. What you do on every other site, will get you paid here. There is no excuse for poverty, in this day and age. Thebigneed plans to prove it!</p>
     </Jumbotron>
 );
 
@@ -104,6 +103,9 @@ render() {
         <div>
          {jumbotronInstance} 
          <div id="firebaseui-auth-container"></div>
+         <div style={{fontSize: '1.5em', fontFamily: 'serif', lineHeight: '1.8em', fontStyle: 'italic'}}><p>"Lately, I have been thinking about the United Airlines issue with customer service and Uber's scandals involving stealing from Google and sexually harassing women. It reminds me of the saying "You shall know a tree by its fruit" - and their fruit is spread all over the news! All that money and power, it's almost like the more money some companies make the less human their leaders become.</p>
+         <br /><p><b style={{fontSize: '2em'}}>Issues like these are a direct consequence of society's  lack of loving and inspirational leaders.</b></p><br /><p>This is why I decided to start the big need, because its gotten so bad that some regular guy like myself must do the impossible and build a company that will show the Facebook's, the Google's world aka ridiculously big company X how to do it right. Amongst these greedy giants of today's world there is just little o'l me and my family. We call ourselves thebigneed. We are stepping onto the scene with a huge ridiculously big and impossible challenge. That is to change the way the economy and society as a whole work. To better it for everyone, from every elderly person to every unborn child.</p> <p>We are the little guys with a mission, a rock and a sling. We are thebigneed. We are Technology leaders who strive to love like King and innovate like Jobs. We who bring social empowerment and justice to the business world, and then execute on it. We seek to inspire and let inspiration be the mechanism of influence not greed. We disrupt conventions like Albert Einstein, We dream of a better world likeMarting Luther king jr, We innovate in multiple spectrums like Steve Jobs, We refuse the status quo like Rosa Parks, We guide society to a better place like Harriet Tubman and and invent miracles like Nicola Tesla. We are thebigneed.</p> <p> So even though right now we are a small organization,
+ we stand on the shoulders of giants! and from this vantage point its all too clear that society and business as a whole desperately need us. In short there is a big need for Thebigneed. Watch for us." --Ezell</p></div>
         </div>
     );
 }
